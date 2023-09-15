@@ -8,7 +8,7 @@ import LoadingSpinner from '../components/Spinner/LoadingSpinner'
 const NavigateRoute = () => {
 
     const [okay, setOkay] = useState()
-    const [auth, setAuth] = useAuth()
+    const [auth] = useAuth()
  
 
    useEffect(() => {

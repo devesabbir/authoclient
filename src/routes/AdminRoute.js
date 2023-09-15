@@ -8,7 +8,7 @@ import LoadingSpinner from '../components/Spinner/LoadingSpinner'
 const AdminRoute = () => {
 
     const [okay, setOkay] = useState()
-    const [auth, setAuth] = useAuth()
+    const [auth] = useAuth()
  
    useEffect(() => {
       const authCheck = async () => {

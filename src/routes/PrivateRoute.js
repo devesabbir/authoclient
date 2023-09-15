@@ -8,15 +8,11 @@ import LoadingSpinner from '../components/Spinner/LoadingSpinner'
 const PrivateRoute = () => {
 
     const [okay, setOkay] = useState()
-    const [auth, setAuth] = useAuth()
+    const [auth] = useAuth()
  
 
    useEffect(() => {
-       try {
-           
-       } catch (error) {
-           
-       }
+     
       const authCheck = async () => {
         let res = await axios.get('/api/v1/auth/me', {
             headers: {
@@ -24,7 +20,7 @@ const PrivateRoute = () => {
             }
         })      
         if (res.data.success) {
-            setOkay(true)
+          setOkay(true)
         } else {
           setOkay(false)
         }
